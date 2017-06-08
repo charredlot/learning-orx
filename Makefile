@@ -1,10 +1,13 @@
 include common.mk
 
-MKFILES=01_Object.mk
+MKFILES=01_Object.mk 02_Clock.mk
+
+.PHONY:
+all: $(MKFILES)
 
 .PHONY: $(MKFILES)
 $(MKFILES):
-	$(MAKE) -f $@ $(MAKECMDGOALS)
+	$(MAKE) -f $(MKFILES_DIR)/$@ $(MAKECMDGOALS)
 
 .PHONY: deps
 deps: $(MKFILES)

@@ -8,6 +8,7 @@ SRC_DIR=src
 OBJ_DIR=obj
 DEP_DIR=dep
 BIN_DIR=bin
+MKFILES_DIR=makefiles
 
 CFLAGS=-g -Wall -Werror -O3
 
