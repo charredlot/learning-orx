@@ -1,6 +1,17 @@
 include common.mk
 
-MKFILES=01_Object.mk 02_Clock.mk
+MKFILES=01_Object.mk\
+    02_Clock.mk\
+    03_Frame.mk\
+    04_Anim.mk\
+    05_Viewport.mk\
+    06_Sound.mk\
+    07_FX.mk\
+    08_Physics.mk\
+    09_Scrolling.mk\
+    10_Locale.mk\
+    11_Spawner.mk\
+    12_Lighting.mk
 
 .PHONY:
 all: $(MKFILES)
