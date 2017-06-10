@@ -17,7 +17,7 @@ deps: $(MKFILES)
 clean:
 	# don't accidentally rm /
 ifdef BIN_DIR
-	rm -vf $(BIN_DIR)/*
+	find $(BIN_DIR)/* ! -name cfg ! -name .gitignore -delete
 endif
 ifdef OBJ_DIR
 	rm -vf $(OBJ_DIR)/*
