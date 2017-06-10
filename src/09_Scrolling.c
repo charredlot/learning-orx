@@ -145,7 +145,6 @@ orxSTATUS orxFASTCALL Init()
 {
   orxVIEWPORT    *pstViewport;
   orxCLOCK       *pstClock;
-  orxOBJECT      *pstSky;
   orxU32          i;
   orxINPUT_TYPE   eType;
   orxENUM         eID;
@@ -196,8 +195,8 @@ orxSTATUS orxFASTCALL Init()
   /* Registers our update callback */
   orxClock_Register(pstClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);
 
-  /* Creates sky */
-  pstSky = orxObject_CreateFromConfig("Sky");
+  /* Creates sky FIXME: return value is ignored, probably is a leak? */
+  orxObject_CreateFromConfig("Sky");
 
   /* Pushes tutorial config section */
   orxConfig_PushSection("Tutorial");
