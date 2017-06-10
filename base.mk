@@ -1,26 +1,5 @@
 include common.mk
 
-ORX=/home/user/install/orx-1.8/dev-linux64
-
-CFLAGS=-g -Wall -Werror -O3
-
-CFLAGS+=-D__orxDEBUG__
-
-INCLUDES=-I$(ORX)/include
-CFLAGS+=$(INCLUDES)
-
-# arch specific?
-CFLAGS+=-ffast-math -msse2 -m64
-
-# C++ ?
-CFLAGS+=-fno-exceptions
-
-LDFLAGS=-L$(ORX)/lib -Wl,-rpath,$(ORX)/lib -Wl,--export-dynamic -m64
-
-LDLIBS=-lorxd -ldl -lm -lrt
-
-####
-
 SRC=$(SRC_DIR)/$(TARGET).c
 OBJS=$(OBJ_DIR)/$(TARGET).o
 DEPS=$(DEP_DIR)/$(TARGET).d
