@@ -11,7 +11,8 @@ MKFILES=01_Object.mk\
     09_Scrolling.mk\
     10_Locale.mk\
     11_Spawner.mk\
-    12_Lighting.mk
+    12_Lighting.mk\
+    pig.mk
 
 .PHONY:
 all: $(MKFILES)
