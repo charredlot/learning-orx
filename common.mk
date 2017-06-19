@@ -9,12 +9,13 @@ OBJ_DIR=obj
 DEP_DIR=dep
 BIN_DIR=bin
 MKFILES_DIR=makefiles
+INCLUDE_DIR=include
 
 CFLAGS=-g -Wall -Werror -O3
 
 CFLAGS+=-D__orxDEBUG__
 
-INCLUDES=-I$(ORX)/include
+INCLUDES=-I$(ORX)/include -I$(INCLUDE_DIR)/
 CFLAGS+=$(INCLUDES)
 
 # arch specific?
